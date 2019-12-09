@@ -26,4 +26,3 @@ mult <- (.[[18]]/ .[[20]]))
 if(mult >= .75 mutate(TCA = (YCA * 4)) else(TCA = (YCA * 6))
 
 
-  
