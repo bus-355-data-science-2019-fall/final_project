@@ -6,3 +6,4 @@ col_descriptions <- read_excel("data/ClassData1.xlsx", sheet = "Column Descripti
 project_data <- read_excel("data/ClassData1.xlsx")
 View(project_data)
 View(col_descriptions)
+
