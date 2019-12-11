@@ -5,8 +5,8 @@ library(dplyr)
 # Import data -----
 col_descriptions <- read_excel("data/ClassData1.xlsx", sheet = "Column Descriptions")
 project_data <- read_excel("data/ClassData1.xlsx")
-View(project_data)
-View(col_descriptions)
+#View(project_data)
+#View(col_descriptions)
 
 
 # sum calculations -----
@@ -37,7 +37,7 @@ YCA_calc <- ProjectDataCalc %>%
 
 # multiplier (# of years) calculation ----
 mutate(Year_calc = (.[[18]]/.[[20]])) %>%
-mutate(Ugrad_Mult = ifelse(Year_calc >= .75, 4, 6))
+mutate(Ugrad_Mult = ifelse(Year_calc >= .70, 4, 6))
 
 # TCA calculation ----
 TCA_Calc <- YCA_calc %>%
