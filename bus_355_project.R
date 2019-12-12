@@ -24,7 +24,7 @@ ProjectDataCalc <- project_data %>%
 ProjectDataCalc <- ProjectDataCalc %>% 
   mutate(IG = ((.[[16]]/100)*.[[17]]))
 
-# YCA
+# YCA ----
 YCA_calc <- ProjectDataCalc %>%
   mutate(IG_UISOnC = UISOnC - IG) %>%
   mutate(IG_UOSOnC = UOSOnC - IG) %>%
@@ -49,5 +49,6 @@ TCA_Calc <- YCA_calc %>%
   mutate(TCA_UOSOnC = (UOSOnC * Ugrad_Mult)) %>%
   mutate(TCA_UISOffC = (UISOffC * Ugrad_Mult)) %>%
   mutate(TCA_UOSOffC = (UOSOffC * Ugrad_Mult))
+
 #Filta Stuff%
 TCA_Cheapest <- head(arrange(TCA_Calc, TCA_UISOffC)) 
